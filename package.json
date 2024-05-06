@@ -1,0 +1,52 @@
+{
+  "name": "waku.jereko.dev",
+  "version": "0.0.1",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n web,api -c green,blue \"$npm_execpath run dev:web\" \"$npm_execpath run dev:api\"",
+    "dev:web": "waku dev",
+    "dev:api": "cd ./src-go && air",
+    "build": "waku build",
+    "start": "waku start",
+    "format": "prettier --write .",
+    "upgrade:deps": "$npm_execpath install waku@latest react@beta react-dom@beta react-server-dom-webpack@beta tailwindcss@next @tailwindcss/postcss@next vite@alpha"
+  },
+  "dependencies": {
+    "@radix-ui/react-label": "^2.0.2",
+    "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-switch": "^1.0.3",
+    "cookie": "^0.6.0",
+    "lucide-react": "^0.378.0",
+    "react": "19.0.0-beta-73bcdfbae5-20240502",
+    "react-dom": "19.0.0-beta-73bcdfbae5-20240502",
+    "react-server-dom-webpack": "19.0.0-beta-73bcdfbae5-20240502",
+    "waku": "0.20.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.0.0-alpha.14",
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@types/cookie": "^0.6.0",
+    "@types/js-cookie": "^3.0.6",
+    "@types/node": "^20.12.8",
+    "@types/react": "npm:types-react@19.0.0-alpha.3",
+    "@types/react-dom": "npm:types-react@19.0.0-alpha.3",
+    "autoprefixer": "^10.4.19",
+    "browserslist": "^4.23.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "concurrently": "^8.2.2",
+    "postcss": "^8.4.38",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.14",
+    "tailwind-merge": "^2.3.0",
+    "tailwindcss": "4.0.0-alpha.14",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "5.4.5",
+    "vercel": "^34.1.7",
+    "vite": "6.0.0-alpha.10"
+  },
+  "volta": {
+    "node": "18.20.2"
+  }
+}

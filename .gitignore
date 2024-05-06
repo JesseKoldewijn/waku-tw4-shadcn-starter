@@ -1,0 +1,10 @@
+node_modules
+dist
+.env*
+!.env.example
+*.tsbuildinfo
+.cache
+.DS_Store
+*.pem
+.vercel
+tmp
